@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Income Expense Calculator</h1>
+    </header>
+    <main>
+        <section class="filters">
+            <h2>Filters</h2>
+            <input type="radio" id="all" name="filter" checked>
+            <label for="all">All</label>
+            <input type="radio" id="income" name="filter">
+            <label for="income">Income</label>
+            <input type="radio" id="expense" name="filter">
+            <label for="expense">Expense</label>
+        </section>
+        <section class="entries">
+            <h2>Entries</h2>
+            <ul id="entry-list"></ul>
+        </section>
+        <section class="new-entry">
+            <h2>Add New Entry</h2>
+            <form>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description"><br><br>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount"><br><br>
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select><br><br>
+                <button id="add-entry">Add Entry</button>
+            </form>
+        </section>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>Total Income: <span id="total-income">$0.00</span></p>
+            <p>Total Expenses: <span id="total-expenses">$0.00</span></p>
+            <p>Net Balance: <span id="net-balance">$0.00</span></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
